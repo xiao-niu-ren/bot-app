@@ -23,7 +23,7 @@ SHA_TZ = timezone(
 utc_now = datetime.utcnow().replace(tzinfo=timezone.utc)
 # 北京时间
 beijing_now = utc_now.astimezone(SHA_TZ)
-TODAY = beijing_now.strftime('%Y-%m-%d')
+TODAY = beijing_now.strftime('%Y-%m-%d %h-%M-%s')
 
 # CN时间获取
 # BJ_TIME_NOW = datetime.utcnow().replace(tzinfo=timezone.utc).astimezone(timezone(timedelta(hours=8)))
@@ -51,8 +51,8 @@ logging.info(TODAY)
 
 logging.info('-=--------------------')
 BJ_TIME_NOW = datetime.utcnow().replace(tzinfo=timezone.utc).astimezone(timezone(timedelta(hours=8)))
-TODAY = BJ_TIME_NOW.strftime('%Y-%m-%d')
-YESTERDAY = (BJ_TIME_NOW.now() - timedelta(days=1)).strftime('%Y-%m-%d')
+TODAY = BJ_TIME_NOW.strftime('%Y-%m-%d %h-%M-%s')
+YESTERDAY = (BJ_TIME_NOW.now() - timedelta(days=1)).strftime('%Y-%m-%d %h-%M-%s')
 logging.info("today:" + TODAY)
 logging.info("yesterday:" + YESTERDAY)
 
