@@ -27,3 +27,8 @@ def startLogging():
 def getBJTodayDateStr():
     bj_time_now = datetime.utcnow().replace(tzinfo=timezone.utc).astimezone(timezone(timedelta(hours=8)))
     return bj_time_now.strftime('%Y-%m-%d')
+
+
+def getBJYesterdayDateStr():
+    bj_time_now = datetime.utcnow().replace(tzinfo=timezone.utc).astimezone(timezone(timedelta(hours=8)))
+    return (bj_time_now - timedelta(days=1)).strftime('%Y-%m-%d')
