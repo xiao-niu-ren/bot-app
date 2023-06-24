@@ -24,6 +24,7 @@ utc_now = datetime.utcnow().replace(tzinfo=timezone.utc)
 # 北京时间
 beijing_now = utc_now.astimezone(SHA_TZ)
 TODAY = beijing_now.strftime('%Y-%m-%d %H:%M:%S')
+YESTERDAY = (beijing_now.now() - timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')
 
 # CN时间获取
 # BJ_TIME_NOW = datetime.utcnow().replace(tzinfo=timezone.utc).astimezone(timezone(timedelta(hours=8)))
@@ -47,7 +48,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 logging.info(beijing_now)
 logging.info(beijing_now.tzname())
-logging.info(TODAY)
+logging.info("today:" + TODAY)
+logging.info("yesterday:" + YESTERDAY)
 
 logging.info('-=--------------------')
 BJ_TIME_NOW = datetime.utcnow().replace(tzinfo=timezone.utc).astimezone(timezone(timedelta(hours=8)))
