@@ -10,8 +10,8 @@ import requests
 
 CALLBACK_URL = os.environ['CALLBACK_URL']
 # specific
-GAODE_API_KEY = os.environ['WEATHER_REPORT__GAODE_API_KEY']
-WeChat_ID_LIST = os.environ['WEATHER_REPORT__WeChat_ID_LIST'].split(',', -1)
+GAODE_API_KEY = os.environ['GAODE_API_KEY']
+WeChat_ID_LIST = os.environ['WeChat_ID_LIST'].split(',', -1)
 
 
 def send_to_wechat(msg):
