@@ -39,4 +39,4 @@ response = session.get(url=GAODE_URL, params=params)
 res_dict = json.loads(response.text)
 for cast in res_dict["forecasts"][0]["casts"]:
     if cast["date"] == TODAY and '雨' in cast['dayweather']:
-        send_to_wechat("今天可能有雨哦，甜心记得带伞~")
+        send_to_wechat("今天可能有" + cast['dayweather'] + "哦，甜心记得带伞呀，不要忘了呀~")
