@@ -49,6 +49,13 @@ logging.info(beijing_now)
 logging.info(beijing_now.tzname())
 logging.info(TODAY)
 
+logging.info('-=--------------------')
+BJ_TIME_NOW = datetime.utcnow().replace(tzinfo=timezone.utc).astimezone(timezone(timedelta(hours=8)))
+TODAY = BJ_TIME_NOW.strftime('%Y-%m-%d')
+YESTERDAY = (BJ_TIME_NOW.now() - timedelta(days=1)).strftime('%Y-%m-%d')
+logging.info("today:" + TODAY)
+logging.info("yesterday:" + YESTERDAY)
+
 # for key in FETCH_LIST.keys():
 #     # get meta-info
 #     name = FETCH_LIST[key]['name']
