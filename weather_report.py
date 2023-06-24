@@ -23,6 +23,7 @@ SHA_TZ = timezone(
 utc_now = datetime.utcnow().replace(tzinfo=timezone.utc)
 # 北京时间
 beijing_now = utc_now.astimezone(SHA_TZ)
+TODAY = beijing_now.strftime('%Y-%m-%d')
 
 # CN时间获取
 # BJ_TIME_NOW = datetime.utcnow().replace(tzinfo=timezone.utc).astimezone(timezone(timedelta(hours=8)))
@@ -46,6 +47,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 logging.info(beijing_now)
 logging.info(beijing_now.tzname())
+logging.info(TODAY)
 
 # for key in FETCH_LIST.keys():
 #     # get meta-info
