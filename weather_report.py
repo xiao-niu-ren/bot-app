@@ -44,7 +44,8 @@ beijing_now = utc_now.astimezone(SHA_TZ)
 # 设置log
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(filename)s:%(lineno)s - %(message)s')
 
-logging.info(beijing_now, beijing_now.tzname())
+logging.info(beijing_now)
+logging.info(beijing_now.tzname())
 
 # for key in FETCH_LIST.keys():
 #     # get meta-info
