@@ -1,2 +1,2 @@
 # bot-app
-personal wechat robot application
+personal WeChat robot application
