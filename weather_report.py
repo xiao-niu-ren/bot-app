@@ -11,7 +11,7 @@ WeChat_ID_LIST = os.environ['WeChat_ID_LIST'].split(',', -1)
 TODAY = getBJTodayDateStr()
 GAODE_API_URL = "https://restapi.amap.com/v3/weather/weatherInfo"
 
-# start
+# start...
 startLogging()
 session = requests.Session()
 params = {
